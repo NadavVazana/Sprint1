@@ -54,6 +54,7 @@ function init() {
     gSafeCells = []
     gSafeButtonClicks = 3
     document.querySelector('.clicks-left').innerText = `${gSafeButtonClicks} clicks available`
+    document.querySelector('.warning-safe-clicks').style.display = 'none'
     gMinesPressed = 0
     gLives = 3
     clearInterval(gTimePassed)
@@ -62,6 +63,7 @@ function init() {
     gClicks = 0
     gFlags = []
     gMines = []
+   
 
     losingTitle.style.display = 'none'
     winningTitle.style.display = 'none'
@@ -258,6 +260,7 @@ function placeNeighbors() {
 
 // cell clicked function
 function cellClicked(elCell, i, j, ev) {
+    console.log(gGame.markedCount);
     if (!gIsClick) return
     if (gBoard[i][j].cellPressed) return
 
@@ -404,6 +407,7 @@ function expandShown(i, j) {
                 }
                 gExpansionUndo.push({ k, n })
                 expandShown(k, n)
+                console.log(gGame.markedCount);
 
 
 
@@ -631,6 +635,7 @@ function undoAction() {
                 elCell.classList.remove('pressed')
                 gBoard[undoItems[i].k][undoItems[i].n].cellPressed = false
             }
+            gGame.markedCount--
 
             renderCell(undoItems[i].k, undoItems[i].n, '')
 
