@@ -570,13 +570,14 @@ function changeDifficulty(elButton) {
 
 //safe button click handle
 function safeButtonClick(button) {
+    debugger
     if (!gGame.isOn) return
     if (gSafeButtonClicks === 0) return
     if (gMinesPressed === 1 || gMinesPressed === 0) {
         if (gLevel.SIZE ** 2 - gGame.markedCount - gMinesPressed === 1 || gLevel.SIZE ** 2 - gGame.markedCount - gMinesPressed === 2)
-            var warning = document.querySelector('.warning-safe-clicks')
+        {    var warning = document.querySelector('.warning-safe-clicks')
         warning.style.display = 'block'
-        return
+        return}
     }
     var emptyCells = getEmptyCell(gBoard)
     var randIdx = getRandomInt(0, emptyCells.length)
