@@ -1,0 +1,192 @@
+body{
+    background-color: antiquewhite;
+}
+
+.board{
+    max-height: 100px;
+    max-width: 426.188;
+    
+}
+.game-container{
+    background-color: black;
+    height: 420px;
+    width: 420px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 5px 10px #888888;
+    transition: box-shadow,   1s ,;
+    /* max-width: 420px;
+    max-height: 600px;
+    min-width: 300px; */
+    
+    
+    
+    
+}
+
+.safe-button-container{
+   
+   
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.safe-button{
+    background-color: rgb(27, 27, 112);
+}
+.safe-button:hover{
+    background-color: rgb(94, 94, 184);
+}
+.score-board{
+    background-color: beige;
+    width: 100px;
+    height: 70x;
+    color: black;
+}
+.safe{
+    background-color: rgb(133, 133, 37);
+}
+.creative-mode{
+    text-align: center;
+}
+.creative-mode-button{
+    background-color: rgb(124, 26, 87);
+   
+    
+}
+
+td{
+    background-color: rgb(150, 64, 64);
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    max-width: 50px;
+    min-width: 50px;
+    max-height: 50px;
+    min-height: 40px;
+    
+}
+td:hover{
+    background-color: rgb(128, 23, 23);
+}
+.pressed{
+    background-color: rgb(39, 13, 13);
+}
+.warning-safe-clicks{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: none;
+}
+
+.seven{
+    background-color: crimson;
+    margin-left: 100px;
+}
+.button-section-two{
+    text-align: center;
+}
+.undo{
+    background-color:royalblue;
+}
+.plant
+{
+    background-color: rgba(211, 0, 0, 0.815);
+}
+
+h1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(206, 185, 157);
+    
+    
+}
+
+img{
+    width: 50px;
+    
+}
+
+.hidden{
+    display:none;
+}
+
+
+.losing-title{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(121, 9, 9);
+    color: antiquewhite;
+    display: none;
+}
+.winning-title{
+    font-size: 60px;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(104, 94, 4);
+    color: antiquewhite;
+    display: none;
+}
+
+.smiling-face{
+    text-align: center;
+    padding: 50px;
+    display: none;
+    width: 150px;
+}
+.lost-smiley{
+    text-align: center;
+    padding: 50px;
+    display: none;
+    width: 150px;
+}
+.win-smiley{
+    text-align: center;
+    padding: 50px;
+    display: none;
+    width: 150px;
+}
+
+.smiley{
+    text-align: center;
+}
+
+.timer{
+    font-size: 50px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.health-points {
+    text-align: center;
+}
+.hints{
+    text-align: center;
+}
+
+.difficulties-buttons{
+    text-align: center;
+    margin-top: 30px;
+}
+
+button{
+    width: 103px;
+    height: 50px;
+    margin: 20px;
+    background-color: rgb(87, 54, 14);
+    color: whitesmoke;
+    border: none;
+    font-size: 20px;
+    box-shadow: 2px 0px #888888;
+}
+button:hover{
+    background-color: rgb(143, 89, 23);
+    transition: 1s;
+}

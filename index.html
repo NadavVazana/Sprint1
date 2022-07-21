@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="icon" type="image/png" href="img/tab-icon.png">
+</head>
+
+<body onload="init()">
+    <h1>Welcome to Mine Sweeper!</h1>
+    <table class="score-board">
+        <tbody>
+
+        </tbody>
+    </table>
+    <div class="health-points">
+        <img class="health1" src="img/live.png" alt="heart1">
+        <img class="health2" src="img/live.png" alt="heart2">
+        <img class="health3" src="img/live.png" alt="heart3">
+    </div>
+    <div class="hints">
+        <img onclick="hintClick()" class="hint1" src="img/bulb.png" alt="hint1">
+        <img onclick="hintClick()" class="hint2" src="img/bulb.png" alt="hint2">
+        <img onclick="hintClick()" class="hint3" src="img/bulb.png" alt="hint3">
+    </div>
+    <div class="safe-button-container"><button onclick="safeButtonClick(this)" class="safe-button">Safe Button</button>
+        <br><span class="clicks-left">3 clicks available</span> </div>
+    <div class="difficulties-buttons">
+        <button class="easy-difficulty" onclick="changeDifficulty(this)">Easy</button>
+        <button class="medium-difficulty" onclick="changeDifficulty(this)">Medium</button>
+        <button class="hard-difficulty" onclick="changeDifficulty(this)">Hard</button>
+    </div>
+    <div onclick="creativeMode()" class="creative-mode"><button class="creative-mode-button">Creative Mode!</button></div>
+    <div class="button-section-two"> 
+        <button class="undo" onclick="undoAction()">UNDO!</button>
+        <button onclick="sevenBoom()" class="seven">7BOOM!</button>
+
+    </div>
+    <div class="timer">0</div>
+    <div class="warning-safe-clicks">Due to the end of the game the safe button was canceled! </div>
+    <table class="game-container">
+
+        <tbody class="board">
+
+        </tbody>
+    </table>
+
+    <h1 class="losing-title">You Lost!</h1>
+    <h1 class="winning-title">You Won!</h1>
+    <div class="smiley"><img onclick="init()" class="smiling-face" src="img/smiling-face.png" alt="smiling-face">
+        <img onclick="init()" class="lost-smiley" src="img/bomb.png" alt="lost-img">
+        <img onclick="init()" class="win-smiley" src="img/trophy.png" alt="win-img">
+
+    </div>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
