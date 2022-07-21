@@ -322,7 +322,7 @@ function cellClicked(elCell, i, j, ev) {
         if (gBoard[i][j].cellPressed) return
         // toggle the flag off
         if (gBoard[i][j].isFlag) {
-            renderCell(i, j, '<img hidden src="/img/flag.png" />')
+            renderCell(i, j, '<img hidden src="img/flag.png" />')
             gBoard[i][j].isFlag = false
             removeFlag(i, j)
 
@@ -330,7 +330,7 @@ function cellClicked(elCell, i, j, ev) {
 
         // toggle the flag on
         else {
-            renderCell(i, j, '<img  src="/img/flag.png" />')
+            renderCell(i, j, '<img  src="img/flag.png" />')
             gBoard[i][j].isFlag = true
             gFlags.push({ i, j })
             checkGameOver()
@@ -343,7 +343,7 @@ function cellClicked(elCell, i, j, ev) {
         // check if its a safe cell with neighbors
         if (gBoard[i][j].mineNeighborsCount > 0) {
 
-            renderCell(i, j, `<img  src="/img/${gBoard[i][j].mineNeighborsCount}.png"/>`)
+            renderCell(i, j, `<img  src="img/${gBoard[i][j].mineNeighborsCount}.png"/>`)
             gBoard[i][j].cellPressed = true
             gGame.markedCount++
             checkGameOver()
