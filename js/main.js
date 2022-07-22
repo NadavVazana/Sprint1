@@ -24,6 +24,7 @@ const elContainer = document.querySelector('.game-container')
 const safeButton = document.querySelector('.safe-button')
 
 
+var gDifficulty// the difficulty 
 var gFlags // array of flags objects
 var gMines = [] // array of mines objects
 var gClicks // how many clicks the user did (not including the mines)
@@ -46,6 +47,7 @@ var gIsFirstClick
 
 
 function init() {
+    
     gExpansionUndo = []
     isSeven = false
     gUndoList = []
@@ -282,7 +284,6 @@ function cellClicked(elCell, i, j, ev) {
             return
         }
         else {
-
             gIsCreative = false
             gGame.isOn = true
             gFirstClick = { i, j }
@@ -474,8 +475,8 @@ function winGame() {
     document.querySelector('.win-smiley').style.display = 'inline'
     document.querySelector('.smiling-face').style.display = 'none'
     localStorage.setItem('Score', gTimeText.innerText)
-
-    document.querySelector('.score-board').innerHTML += `<tr><td>${localStorage.getItem('Score')}</td></tr>`
+    if(!gDifficulty) gDifficulty='Easy'
+    document.querySelector('.score-board').innerHTML += `</tr><td> ${gDifficulty} : ${localStorage.getItem('Score')}</td></tr>`
 }
 
 
@@ -552,18 +553,22 @@ function changeDifficulty(elButton) {
             gLevel.SIZE = 4
             gLevel.MINES = 2
             init()
-
+            gDifficulty = 'Easy'
+            
             break
-        case 'Medium':
+            case 'Medium':
+            
             gLevel.SIZE = 8
             gLevel.MINES = 12
             init()
-
+            gDifficulty = 'Medium'
+            
             break
-        case 'Hard':
-            gLevel.SIZE = 12
-            gLevel.MINES = 30
-            init()
+            case 'Hard':
+                gLevel.SIZE = 12
+                gLevel.MINES = 30
+                init()
+                gDifficulty = 'Hard'
 
             break
 
