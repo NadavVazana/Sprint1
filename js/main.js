@@ -574,7 +574,7 @@ function changeDifficulty(elButton) {
 
 //safe button click handle
 function safeButtonClick(button) {
-    debugger
+
     if (!gGame.isOn) return
     if (gSafeButtonClicks === 0) return
     if (gMinesPressed === 1 || gMinesPressed === 0) {
@@ -585,6 +585,10 @@ function safeButtonClick(button) {
     }
     var emptyCells = getEmptyCell(gBoard)
     var randIdx = getRandomInt(0, emptyCells.length)
+    if(gSafeCells.includes(emptyCells[randIdx]))
+    console.log(emptyCells[randIdx]);
+
+    
     while (emptyCells[randIdx].element === MINE || emptyCells[randIdx].cellPressed) {
 
         var emptyCells = getEmptyCell(gBoard)
@@ -601,6 +605,7 @@ function safeButtonClick(button) {
     if (gSafeButtonClicks === 0) {
         document.querySelector('.safe-button').style.backgroundColor = 'grey'
     }
+    console.log(gSafeCells);
 
 }
 
